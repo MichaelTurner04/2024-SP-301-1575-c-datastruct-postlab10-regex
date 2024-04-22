@@ -1,0 +1,9 @@
+1a. grep -v '^#' story-plain.txt
+1b. grep -v '^\s*#' story-space.txt
+
+2. sed -i 's/[aAeEiIoOuU]//g' story-plain.txt
+
+3. command: grep '^[0-9]/{4/}-01-' numbers.log | wc -l |awk '{total += $1 } END { if (NR > 0) print toatal / NR }'
+Answer: 8684
+
+4.grep -oE '\b[0-9]{3}[-. ]?[0-9]{3}[-. ]?[0-9]{4}\b' phonebook.txt | sed 's/[^0-9]//g'
